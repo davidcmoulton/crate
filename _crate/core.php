@@ -54,6 +54,7 @@ function get_file_index($dir) {
         }
 
         closedir($handle);
+        sort($thelist);
         return $thelist;
     }
     
@@ -83,6 +84,7 @@ function get_files_with_prefix($prefix, $url = null) {
 
         closedir($handle);
         
+        sort($thelist);
         return $thelist;
     }
 }
