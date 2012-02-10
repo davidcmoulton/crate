@@ -108,12 +108,12 @@ function get_dir_from_url($url = '') {
 }
 
 function is_showable_file($file) {
-    $black_listed_dirs = array('.', '..', 'index.php', '.htaccess', '.svn');
+    $black_listed_dirs = array('.', '..', 'index.php', '.htaccess', '.svn', 'readme.md', 'readme.markdown');
     
     /* Get rid of anything that starts with a . or an _ */
     if (strpos((string)$file, ".") !== 0 && strpos((string)$file, "_") !== 0) {
         /* Get rid of anything in the black list */
-        if (!in_array($file, $black_listed_dirs)) {
+        if (!in_array(strtolower($file), $black_listed_dirs)) {
             return True;
         }
     }
