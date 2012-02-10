@@ -126,14 +126,4 @@ function get_file_suffix($file) {
     return end(explode('.', $file));
 }
 
-
-/* TODO: This is slow, should probably cache rev and date on a post update/commit hook. */
-exec("svn info", $svn, $status);
-$tmp = explode("(", $svn[9]);
-$tmp = explode(")", $tmp[1]);
-$last_updated = $tmp[0];
-
-$tmp = explode(":", $svn[8]);
-$revision_number = $tmp[1];
-
 ?>
