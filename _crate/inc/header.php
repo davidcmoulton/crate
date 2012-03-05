@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <title><?php echo $config['CLIENT_NAME']; ?> &#8212; <?php echo $config['PROJECT_NAME']; ?></title>
     <link rel="stylesheet" href="/_crate/c/core.css">
+    <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
 <body>
     <div class="rail-container">
