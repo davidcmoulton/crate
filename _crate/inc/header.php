@@ -1,4 +1,4 @@
-<?php if ($_GET['ajax'] != "true") { ?>
+<?php if (!isset($_GET['ajax']) || $_GET['ajax'] != "true") { ?>
 <!DOCTYPE html>
 <html>
 <head>

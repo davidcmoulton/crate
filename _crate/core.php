@@ -15,7 +15,7 @@ $fp = fopen($config_file, "r");
 
 while (!feof($fp)) {
     $line = trim(fgets($fp));
-    if ($line && !ereg("^$comment", $line)) {
+    if ($line && !preg_match("/^$comment/", $line)) {
         $pieces = explode("=", $line);
         $option = trim($pieces[0]);
         $value = trim($pieces[1]);
@@ -101,7 +101,7 @@ function filter_url($url) {
 }
 
 function get_dir_from_url($url = '') {
-    if ($url[0] == '/') {
+    if (isset($url[0]) && $url[0] == '/') {
         $dir = $_SERVER['DOCUMENT_ROOT'].$url;
     } else {
         $dir = getcwd().'/'.$url;
@@ -123,7 +123,8 @@ function is_showable_file($file) {
 }
 
 function get_file_suffix($file) {
-    return end(explode('.', $file));
+    $parts = explode('.', $file);
+    return end($parts);
 }
 
 ?>

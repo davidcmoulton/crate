@@ -1,4 +1,4 @@
-<?php if ($_GET['ajax'] != "true") { ?>
+<?php if (!isset($_GET['ajax']) || $_GET['ajax'] != "true") { ?>
         </div>
     </div><!-- /.page-container -->
 
