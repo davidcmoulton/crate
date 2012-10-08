@@ -12,10 +12,14 @@
 <?php list_files(); ?>
 </ul>
 
-<h2>List Files With Prefix</h2>
-<p>Use the <code>list_files_with_prefix</code> function to list files in a folder prefixed with a certain value. In this example we only wish to show files prefixed with 'spreadsheet'.</p>
+<h2>List Files Parameters</h2>
+<p>Use the options array to specify the <code>url</code>, <code>prefix</code> and <code>sort</code> for the list files function.</p> 
+<pre><code>list_files(array(
+    'prefix' => "spreadsheet",
+    'sort' => array('spreadsheet.xls', 'spreadsheet.numbers','spreadsheet.xlsx')
+))</code></pre>
 <ul class="files">
-<?php list_files_with_prefix("spreadsheet"); ?>
+<?php list_files(array('prefix' => "spreadsheet", 'sort' => array('spreadsheet.xls', 'spreadsheet.numbers','spreadsheet.xlsx'))); ?>
 </ul>
 
 <?php

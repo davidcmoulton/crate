@@ -27,19 +27,43 @@ fclose($fp);
 # Get directories in the route for the header.
 $directories = get_file_index($root_dir);
 
-function list_files($url = null) {
-    list_files_with_prefix(null, $url);
-}
-
-function list_files_with_prefix($prefix, $url = null) {
-    $files = get_files_with_prefix($prefix, $url);
+function list_files($options = array()) {
+    if (gettype($options) == 'string') {
+        $options = Array('url' => $options);
+    }
+    $options['url'] = isset($options['url']) ? $options['url'] : null;
+    $options['prefix'] = isset($options['prefix']) ? $options['prefix'] : null;
+    $files = get_files_with_prefix($options['prefix'], $url);
+    if (isset($options['sort'])) {
+        $files = custom_sort_files($options['sort'], $files);
+    }
     foreach ($files as $file) {
         $html =  '<li>';
         $html .= '<a class="icon file" href="' . $file["url"] .'">' . $file["name"];
         $html .= '<span class="meta"><strong>Updated:</strong> ' . $file["last_modified"] . ', ' . $file["size"] . '</span></a></li>';
         echo $html;
     }
-    
+}
+
+function list_files_with_prefix($prefix, $url = null) {
+    list_files(array(
+        'url'    => $url,
+        'prefix' => $prefix
+    ));
+}
+
+function custom_sort_files($sort, $files) {
+    $sorted = array();
+    foreach($sort as $name) {
+        foreach ($files as $key => $file) {
+            if ($file['name'] == $name) {
+                array_push($sorted, $file);
+                unset($files[$key]);
+                break;
+            }
+        }
+    }
+    return array_merge($sorted, $files);
 }
 
 function get_file_index($dir) {
