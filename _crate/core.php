@@ -33,7 +33,7 @@ function list_files($options = array()) {
     }
     $options['url'] = isset($options['url']) ? $options['url'] : null;
     $options['prefix'] = isset($options['prefix']) ? $options['prefix'] : null;
-    $files = get_files_with_prefix($options['prefix'], $url);
+    $files = get_files_with_prefix($options['prefix'], isset($url));
     if (isset($options['sort'])) {
         $files = custom_sort_files($options['sort'], $files);
     }
