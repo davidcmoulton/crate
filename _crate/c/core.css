@@ -12,7 +12,14 @@
 body {
     color:#666;
     font:16px/24px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    background:#FFF url("/_crate/i/rail.png") repeat-y fixed 0 0;
+    /*background:#FFF url("/_crate/i/rail.png") repeat-y fixed 0 0;*/
+    background: #f0f0ec;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(20%,#f0f0ec), color-stop(80%,#fff)) repeat-y fixed 0 0;
+    background: -webkit-linear-gradient(top, #f0f0ec 20%,#fff 80%) repeat-y fixed 0 0;
+    background: -moz-linear-gradient(top, #f0f0ec 20%, #fff 80%) repeat-y fixed 0 0;
+    background: -ms-linear-gradient(top, #f0f0ec 20%,#fff 80%) repeat-y fixed 0 0;
+    background: -o-linear-gradient(top, #f0f0ec 20%,#fff 80%) repeat-y fixed 0 0;
+    background: linear-gradient(to bottom, #f0f0ec 20%,#fff 80%) repeat-y fixed 0 0;
     -webkit-font-smoothing:antialiased;
 }
 
@@ -28,14 +35,14 @@ dl {
 a,
 a:link,
 a:visited {
-    color:#06C;
+    color:#17B;
     font-weight:bold;
     text-decoration:none;
 }
 a:hover,
 a:focus,
 a:active {
-    color:#04A;
+    color:#39e;
     text-decoration:underline;
 }
 a[href^="tel:"] {
@@ -92,7 +99,7 @@ code {
     text-shadow:0 1px 0 #FFF;
 }
 .project-name h2 {
-    color:#444;
+    color:#70930f;
     font-size:24px;
     font-weight:bold;
     letter-spacing:-1px;
@@ -134,10 +141,6 @@ code {
     padding:8px 16px 7px 8px;
     display:block;
 }
-.project-nav li a:hover,
-.project-nav li a:focus {
-    color:#04A;
-}
 .project-nav li:last-child a {
     border-bottom:0 none;
     padding-bottom:8px;
@@ -150,8 +153,8 @@ code {
 .project-nav li.selected a {
     margin-right:-1px;
     margin-left:-4px;
-    border-left:4px solid #8FB309;
-    border-bottom:1px solid #ddd;
+    border-left:4px solid #90b32f;
+    border-bottom:1px solid #DCE0D9;
     padding-bottom:7px;
     background:#FFF;
 }
@@ -200,30 +203,20 @@ a.hallmark:hover {
     overflow:hidden;
 }
 .page h1 {
-    color:#8FB309;
+    color:#fff;
     font-size:32px;
-    font-weight:200;
+    font-weight:500;
     line-height:1;
-    letter-spacing:-1px;
-    text-shadow:0 1px 0 #FFF;
-    background:-moz-linear-gradient(top, #FFF 0%, #F9F9F9 100%);
-    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF), color-stop(100%,#F9F9F9));
-    background:-webkit-linear-gradient(top, #FFF 0%,#F9F9F9 100%);
-    background:-o-linear-gradient(top, #FFF 0%,#F9F9F9 100%);
-    background:-ms-linear-gradient(top, #FFF 0%,#F9F9F9 100%);
-    background:linear-gradient(top, #FFF 0%,#F9F9F9 100%);
-    border-bottom:1px solid #EEE;
+    background-color:#7f837a;
     margin:0 -32px 40px -32px;
     padding:56px 32px 15px 32px;
 }
 .page h2 {
-    color:#999;
-    font-size:11px;
-    line-height:16px;
-    letter-spacing:1px;
-    font-weight:normal;
-    text-transform:uppercase;
-    border-bottom:1px solid #DDD;
+    color:#792c5c;
+    font-size:20px;
+    line-height:24px;
+    font-weight:bold;
+    border-bottom:1px solid #f0f0ec;
     margin:32px 0 8px 0;
     padding-bottom:7px;
 }
@@ -247,7 +240,7 @@ a.hallmark:hover {
     overflow:hidden;
     }
     .section.divide {
-        border-top:1px solid #DDD;
+        border-top:1px solid #DCE0D9;
         padding-top:7px;
     }
 .section .half {
