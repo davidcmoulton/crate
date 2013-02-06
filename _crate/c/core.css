@@ -12,7 +12,6 @@
 body {
     color:#666;
     font:16px/24px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    /*background:#FFF url("/_crate/i/rail.png") repeat-y fixed 0 0;*/
     background: #f0f0ec;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(20%,#f0f0ec), color-stop(80%,#fff)) repeat-y fixed 0 0;
     background: -webkit-linear-gradient(top, #f0f0ec 20%,#fff 80%) repeat-y fixed 0 0;
@@ -140,6 +139,9 @@ code {
     border-bottom:1px solid rgba(204, 204, 204, 0.25);
     padding:8px 16px 7px 8px;
     display:block;
+}
+.project-nav li a[href*="."] {
+    text-transform:lowercase;
 }
 .project-nav li:last-child a {
     border-bottom:0 none;
