@@ -48,14 +48,14 @@
         <p><a class="email" href="mailto:ben@clearleft.com">ben@clearleft.com</a></p>
     </div>
     <div class="half vcard">
-        <img class="photo" src="http://clearleft.com/_assets/is/harry-brignull.jpg" alt="" width="64" height="64"/>
-        <h3><a class="fn url" href="http://clearleft.com/is/harry-brignull/">Harry Brignull</a> &#8212; <span class="role">User Experience Design</span></h3>
+        <img class="photo" src="http://clearleft.com/_assets/is/michael-allan.jpg" alt="" width="64" height="64"/>
+        <h3><a class="fn url" href="http://clearleft.com/is/michael-allan/">Michael Allan</a> &#8212; <span class="role">Visual Design</span></h3>
         <p><a class="email" href="mailto:harry@clearleft.com">harry@clearleft.com</a></p>
     </div>
     <div class="half vcard">
         <img class="photo" src="http://clearleft.com/_assets/is/jessica-jebari.jpg" alt="" width="64" height="64"/>
-        <h3><a class="fn url" href="http://clearleft.com/is/jessica-jebari/">Jess Jebari</a> &#8212; <span class="role">Project Manager</span></h3>
-        <p><a class="email" href="mailto:jess@clearleft.com">jess@clearleft.com</a></p>
+        <h3><a class="fn url" href="http://clearleft.com/is/jessica-jebari/">Jessica Jebari</a> &#8212; <span class="role">Project Manager</span></h3>
+        <p><a class="email" href="mailto:jessica@clearleft.com">jessica@clearleft.com</a></p>
     </div>
 </div>
 
