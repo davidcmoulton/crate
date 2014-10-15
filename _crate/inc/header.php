@@ -22,20 +22,6 @@
                 <?php foreach ($directories as $directory) { ?><li<?php if ($_SERVER['REQUEST_URI'] == '/'.$directory.'/') { ?> class="selected"<?php } ?>><a href="/<?php echo $directory; ?>/"><?php echo ucwords(str_replace("-", " ", $directory)); ?></a></li><?php echo "\n                "; } ?>
 
             </ol>
-            <?php 
-            exec("git log -1 --pretty=format:'%cr||%h' --abbrev-commit", $git, $status);
-            $git = explode("||", $git[0]);
-            $last_updated = $git[0];
-            $hash = $git[1];
-            ?>
-            <?php if (!empty($last_updated) || !empty($hash)) { ?>
-            <dl class="project-meta">
-                <dt>Last updated:</dt>
-                <dd><?php echo $last_updated ?></dd>
-                <dt>Commit hash:</dt>
-                <dd><?php echo $hash ?></dd>
-            </dl>
-            <?php } ?>
         </div>
     </div><!-- /.rail-container -->
 
