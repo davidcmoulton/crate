@@ -23,5 +23,5 @@
 </ul>
 
 <?php
-    include($crate_dir . 'inc/footer.php');
+//    include($crate_dir . 'inc/footer.php');
 ?>

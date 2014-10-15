@@ -1,0 +1,38 @@
+$color-elife-brown: #6e3f19;
+$color-elife-dk-green: #046535;
+$color-elife-red: rgb(207, 12, 78); // aka 'fuchsia'
+$color-elife-lt-green: rgb(98, 159, 67);
+$color-elife-lt-green-alpha: rgba(98 ,159, 67, 0.1);
+$color-elife-lt-blue: #0a9dd9;
+$color-elife-med-blue: #0961ab;
+$color-elife-purple: #732060;
+$color-elife-dk-blue: #273b81;
+$color-elife-lt-grey: #929497;
+$color-elife-med-grey: #6d6e70;
+$color-elife-dark-grey: #00000f;
+
+$color-link: #22a0d8;
+// @end Colors/Colours
+
+
+// @group Fonts
+
+// For large headings, often treated in various shades of grey
+$font-elife-heading: 'Avenir LT W01 95 Black', sans-serif;
+
+// For body copy, often treated in black
+$font-elife-body: 'Avenir LT W01 45 Book', sans-serif;
+
+// For small type, often treated in a pop of a brand color such as fuchsia
+$font-elife-detail: 'Avenir LT W01 55 Roman', sans-serif;
+
+// For extremely small text, often treated in black
+$font-elife-tiny: 'Avenir LT W01 65 Medium', sans-serif;
+
+$font-elife-heavy: 'Avenir LT W01 85 Heavy', sans-serif;
+
+$font-elife-light: 'Avenir LT W01 35 Light', sans-serif;
+// @end Fonts
+
+// product-specific
+$color-lt-grey: rgb(240, 240, 240);

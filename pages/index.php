@@ -4,4 +4,9 @@
     include($crate_dir . "inc/header.php");
 ?>
 
-
+<h1>Templates of the new article types</h1>
+<ul class="files">
+<?php
+  list_files();
+?>
+</ul>
