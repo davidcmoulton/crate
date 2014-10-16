@@ -1,4 +1,3 @@
-<?php if (!isset($_GET['ajax']) || $_GET['ajax'] != "true") { ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,4 +26,3 @@
 
     <div class="page-container">
         <div class="page">
-<?php } ?>
