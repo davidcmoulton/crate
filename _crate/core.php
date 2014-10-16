@@ -33,7 +33,8 @@ function list_files($options = array()) {
     }
     $options['url'] = isset($options['url']) ? $options['url'] : null;
     $options['prefix'] = isset($options['prefix']) ? $options['prefix'] : null;
-    $files = get_files_with_prefix($options['prefix'], $options['url']);
+    $options['exclude'] = isset($options['exclude']) ? $options['exclude'] : FALSE;
+    $files = get_files_with_prefix($options['prefix'], $options['url'], $options['exclude']);
     if (isset($options['sort'])) {
         $files = custom_sort_files($options['sort'], $files);
     }
@@ -45,10 +46,11 @@ function list_files($options = array()) {
     }
 }
 
-function list_files_with_prefix($prefix, $url = null) {
+function list_files_with_prefix($prefix, $url = null, $exclude_prefixed = FALSE) {
     list_files(array(
         'url'    => $url,
-        'prefix' => $prefix
+        'prefix' => $prefix,
+        'exclude' => $exclude_prefixed,
     ));
 }
 
@@ -84,7 +86,7 @@ function get_file_index($dir) {
     
 }
 
-function get_files_with_prefix($prefix, $url = null) {
+function get_files_with_prefix($prefix, $url = null, $exclude_prefix = FALSE) {
     $url = filter_url($url);
     $dir = get_dir_from_url($url);
     if ($handle = opendir($dir)) {
@@ -92,8 +94,15 @@ function get_files_with_prefix($prefix, $url = null) {
 
         /* Loop through the directory. */
         while (false !== ($file = readdir($handle))) {
-            /* If prefix is set then check if it is at the beginning of a file name. */
-            if (!isset($prefix) || strpos((string)$file, $prefix) === 0) {
+            /**
+             * List the file if:
+             * - no prefix is set
+             * - prefix is set, matches, and we're not excluding prefixed files
+             * - prefix is set, doesn't match and we are excluding prefixed files
+             */
+            if (!isset($prefix) || 
+                (strpos((string)$file, $prefix) !== 0 && $exclude_prefix) || 
+                (strpos((string)$file, $prefix) === 0 && !$exclude_prefix)) {
                 if (is_showable_file($file)) {
                     array_push($thelist, array(
                         "name" => $file,
