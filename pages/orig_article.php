@@ -14,6 +14,7 @@
   <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# book: http://ogp.me/ns/book#" >
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <base href="http://elifesciences.org" />
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 <meta property="og:image" content="http://cdn.elifesciences.org/images/elife_final_logo_rgb.jpg" />
 <meta property="og:url" content="http://elifesciences.org/content/3/e03683" />
 <link rel="shortcut icon" href="http://dex3165296d6d.cloudfront.net/sites/default/themes/elife/favicon.ico" type="image/vnd.microsoft.icon" />
